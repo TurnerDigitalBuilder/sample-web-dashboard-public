@@ -1,0 +1,30 @@
+/* Basic page styling */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* Header with sign-in buttons */
+header {
+    background-color: #f0f0f0;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main {
+    padding: 1em;
+}
+#item-list {
+    margin-top: 1em;
+    border-collapse: collapse;
+    width: 100%;
+}
+#item-list th, #item-list td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+#item-list th {
+    background-color: #f2f2f2;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Basic page setup -->
+    <title>Sample Web Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header with sign-in controls -->
+    <header>
+        <h1>Sample Web Dashboard</h1>
+        <div id="auth-container">
+            <button id="sign-in" onclick="signIn()">Sign In</button>
+            <button id="sign-out" onclick="signOut()" style="display: none;">Sign Out</button>
+        </div>
+    </header>
+    <main>
+        <!-- Displays the signed-in user's name -->
+        <div id="user-info" style="display: none;">
+            <p><strong>Welcome, <span id="user-name"></span></strong></p>
+        </div>
+        <!-- Read-only list of SharePoint items -->
+        <div id="content" style="display: none;">
+            <h2>Dashboard Items</h2>
+            <div id="item-list"></div>
+        </div>
+    </main>
+    <!-- Load JavaScript libraries -->
+    <script src="https://alcdn.msauth.net/browser/2.15.0/js/msal-browser.js"></script>
+    <script src="auth.js"></script>
+    <script src="graph.js"></script>
+    <script src="ui.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title and CSS for the page -->
+    <title>Sample Web Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top banner with sign-in buttons -->
+    <header>
+        <h1>Sample Web Dashboard</h1>
+        <div id="auth-container">
+            <button id="sign-in" onclick="signIn()">Sign In</button>
+            <button id="sign-out" onclick="signOut()" style="display: none;">Sign Out</button>
+        </div>
+    </header>
+    <main>
+        <!-- This section welcomes the signed-in user -->
+        <div id="user-info" style="display: none;">
+            <p><strong>Welcome, <span id="user-name"></span></strong></p>
+        </div>
+
+        <!-- The main dashboard content -->
+        <div id="content" style="display: none;">
+            <h2>Dashboard Items</h2>
+            <div id="item-list"></div>
+
+            <!-- Form to create a new SharePoint list item -->
+            <div id="input-form">
+                <h3>Add New Item</h3>
+                <form onsubmit="addItem(event)">
+                    <label for="title">Title:</label><br>
+                    <input type="text" id="title" name="title"><br>
+
+                    <label for="description">Description:</label><br>
+                    <input type="text" id="description" name="description"><br>
+
+                    <label for="assignment">Assignment:</label><br>
+                    <input type="text" id="assignment" name="assignment"><br>
+
+                    <label for="status">Status:</label><br>
+                    <input type="text" id="status" name="status"><br>
+
+                    <label for="size">Size:</label><br>
+                    <input type="text" id="size" name="size"><br>
+
+                    <label for="complete_year">Complete Year:</label><br>
+                    <input type="text" id="complete_year" name="complete_year"><br>
+
+                    <label for="location">Location:</label><br>
+                    <input type="text" id="location" name="location"><br><br>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </main>
+    <!-- JavaScript libraries and our own scripts -->
+    <script src="https://alcdn.msauth.net/browser/2.15.0/js/msal-browser.js"></script>
+    <script src="auth.js"></script>
+    <script src="graph.js"></script>
+    <script src="ui.js"></script>
+    <script src="additem.js"></script>
+</body>
+</html>
